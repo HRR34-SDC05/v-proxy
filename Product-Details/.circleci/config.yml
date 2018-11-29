@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.11.4
+    steps:
+      - checkout
+      - run: npm test
+      - run:
+          name: Run tests with JUnit as reporter
+          command: npm i jest -- --ci --testResultsProcessor="jest-junit"
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+      - store_test_results:
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
+      - run:
+          name: "JavaScript Linter"
+          command: npm lint -- --format junit -o reports/junit/js-lint-results.xml
+

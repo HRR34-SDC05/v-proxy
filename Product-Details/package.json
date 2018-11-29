@@ -1,0 +1,87 @@
+{
+  "name": "Product-Details",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "build-dev": "webpack --config webpack.dev.js --watch --open",
+    "build-prod": "webpack --config webpack.prod.js --open",
+    "db:setup": "node database/seed.js",
+    "test": "jest --watch --verbose",
+    "stage": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md,scss,yaml,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrontEndCapstone/Product-Details.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrontEndCapstone/Product-Details/issues"
+  },
+  "homepage": "https://github.com/FrontEndCapstone/Product-Details#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "axios-mock-adapter": "^1.15.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "faker": "^4.1.0",
+    "husky": "^1.1.2",
+    "install": "^0.12.2",
+    "jest": "^23.6.0",
+    "jest-environment-node": "^23.4.0",
+    "lint-staged": "^8.0.0",
+    "mongodb-memory-server": "^2.6.2",
+    "npm": "^6.4.1",
+    "prettier": "^1.14.3",
+    "regenerator-runtime": "^0.12.1",
+    "webpack": "^4.24.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.8",
+    "mongoose": "^5.3.6",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-star-ratings": "^2.3.0",
+    "uglifyjs-webpack-plugin": "^2.0.1"
+  }
+}

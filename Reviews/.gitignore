@@ -1,0 +1,9 @@
+/node_modules
+/client/dist
+.coveralls.yml
+/coverage
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

@@ -1,0 +1,419 @@
+Statistical profiling result from isolate-0x3c06740-v8.log, (277 ticks, 22 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      1    0.4%          /usr/lib/libstdc++.so.6.0.25
+      1    0.4%          /usr/lib/libpthread-2.28.so
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.7%    0.7%  LazyCompile: ~normalizeStringPosix path.js:101:30
+      2    0.7%    0.7%  Builtin: InterpreterEntryTrampoline
+      1    0.4%    0.4%  StoreIC: A store IC from the snapshot
+      1    0.4%    0.4%  Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/utils.js:1:11
+      1    0.4%    0.4%  Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/router/route.js:1:11
+      1    0.4%    0.4%  Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/router/index.js:1:11
+      1    0.4%    0.4%  Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/body-parser/node_modules/iconv-lite/lib/index.js:1:11
+      1    0.4%    0.4%  Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/body-parser/lib/types/json.js:1:11
+      1    0.4%    0.4%  LazyCompile: ~read _http_incoming.js:91:47
+      1    0.4%    0.4%  LazyCompile: ~assertPath path.js:26:20
+      1    0.4%    0.4%  LazyCompile: ~_combinedTickCallback internal/process/next_tick.js:130:33
+      1    0.4%    0.4%  LazyCompile: ~TimersList timers.js:211:20
+      1    0.4%    0.4%  LazyCompile: ~Reader.read /home/dsock/FEC/reviews/node_modules/packet-reader/index.js:43:33
+      1    0.4%    0.4%  LazyCompile: ~Mime.define /home/dsock/FEC/reviews/node_modules/mime/mime.js:21:34
+      1    0.4%    0.4%  LazyCompile: ~EventEmitter.init events.js:62:29
+      1    0.4%    0.4%  LazyCompile: ~Client._attachListeners /home/dsock/FEC/reviews/node_modules/pg/lib/client.js:246:46
+      1    0.4%    0.4%  LazyCompile: ~Buffer.readInt32BE buffer.js:1139:40
+      1    0.4%    0.4%  LazyCompile: *normalizeStringPosix path.js:101:30
+      1    0.4%    0.4%  Builtin: StringPrototypeCharCodeAt
+      1    0.4%    0.4%  Builtin: LoadIC_Uninitialized
+      1    0.4%    0.4%  Builtin: LoadIC_Noninlined
+      1    0.4%    0.4%  Builtin: KeyedStoreIC_Megamorphic_Strict
+
+ [C++]:
+   ticks  total  nonlib   name
+     84   30.3%   30.5%  node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    2.9%    2.9%  merge_state_array
+      7    2.5%    2.5%  __memcpy_ssse3
+      5    1.8%    1.8%  arena_get2.part.4
+      4    1.4%    1.5%  v8::internal::Scanner::Scan()
+      4    1.4%    1.5%  v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::FindEntry(v8::internal::Isolate*, v8::internal::StringTableKey*)
+      4    1.4%    1.5%  node::Binding(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    1.1%    1.1%  v8::internal::ParserBase<v8::internal::Parser>::ParseBinaryExpression(int, bool, bool*)
+      3    1.1%    1.1%  v8::internal::ParserBase<v8::internal::Parser>::BindingPatternUnexpectedToken()
+      3    1.1%    1.1%  v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      3    1.1%    1.1%  node::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    1.1%    1.1%  node::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.7%    0.7%  v8::internal::String::CalculateLineEnds(v8::internal::Handle<v8::internal::String>, bool)
+      2    0.7%    0.7%  v8::internal::Scanner::SkipSingleLineComment()
+      2    0.7%    0.7%  v8::internal::FeedbackVector::New(v8::internal::Isolate*, v8::internal::Handle<v8::internal::SharedFunctionInfo>)
+      2    0.7%    0.7%  v8::internal::AstNumberingVisitor::VisitNoStackOverflowCheck(v8::internal::AstNode*)
+      2    0.7%    0.7%  v8::internal::Accessors::FunctionLengthGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      2    0.7%    0.7%  node::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.7%    0.7%  getttyname
+      2    0.7%    0.7%  __fpathconf
+      1    0.4%    0.4%  void node::StreamBase::JSMethod<node::LibuvStreamWrap, &(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.4%    0.4%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.4%    0.4%  v8::internal::parsing::ParseFunction(v8::internal::ParseInfo*, v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Isolate*)
+      1    0.4%    0.4%  v8::internal::interpreter::RegisterTransferWriter::EmitLdar(v8::internal::interpreter::Register)
+      1    0.4%    0.4%  v8::internal::interpreter::ConstantArrayBuilder::ToFixedArray(v8::internal::Isolate*)
+      1    0.4%    0.4%  v8::internal::interpreter::BytecodeGenerator::VisitNoStackOverflowCheck(v8::internal::AstNode*)
+      1    0.4%    0.4%  v8::internal::interpreter::BytecodeGenerator::VisitCallNew(v8::internal::CallNew*)
+      1    0.4%    0.4%  v8::internal::interpreter::BytecodeGenerator::VisitAssignment(v8::internal::Assignment*)
+      1    0.4%    0.4%  v8::internal::interpreter::BytecodeGenerator::BuildVariableLoad(v8::internal::Variable*, v8::internal::FeedbackSlot, v8::internal::HoleCheckMode, v8::internal::TypeofMode)
+      1    0.4%    0.4%  v8::internal::compiler::JumpThreading::ApplyForwarding(v8::internal::ZoneVector<v8::internal::compiler::RpoNumber>&, v8::internal::compiler::InstructionSequence*)
+      1    0.4%    0.4%  v8::internal::compiler::BytecodeLivenessMap::GetLiveness(int)
+      1    0.4%    0.4%  v8::internal::Zone::New(unsigned long)
+      1    0.4%    0.4%  v8::internal::WeakFixedArray::Add(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::HeapObject>, int*)
+      1    0.4%    0.4%  v8::internal::VariableMap::Declare(v8::internal::Zone*, v8::internal::Scope*, v8::internal::AstRawString const*, v8::internal::VariableMode, v8::internal::VariableKind, v8::internal::InitializationFlag, v8::internal::MaybeAssignedFlag, bool*)
+      1    0.4%    0.4%  v8::internal::TransitionsAccessor::SearchTransition(v8::internal::Name*, v8::internal::PropertyKind, v8::internal::PropertyAttributes)
+      1    0.4%    0.4%  v8::internal::TransitionsAccessor::Insert(v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::Map>, v8::internal::SimpleTransitionFlag)
+      1    0.4%    0.4%  v8::internal::TransitionArray::SearchDetails(int, v8::internal::PropertyKind, v8::internal::PropertyAttributes, int*)
+      1    0.4%    0.4%  v8::internal::StringToDouble(v8::internal::UnicodeCache*, v8::internal::Vector<unsigned char const>, int, double)
+      1    0.4%    0.4%  v8::internal::String::IsOneByteEqualTo(v8::internal::Vector<unsigned char const>)
+      1    0.4%    0.4%  v8::internal::String::GetFlatContent()
+      1    0.4%    0.4%  v8::internal::String::Flatten(v8::internal::Handle<v8::internal::String>, v8::internal::PretenureFlag)
+      1    0.4%    0.4%  v8::internal::String::ComputeAndSetHash()
+      1    0.4%    0.4%  v8::internal::StoreIC::GetMapIndependentHandler(v8::internal::LookupIterator*)
+      1    0.4%    0.4%  v8::internal::StoreBuffer::InsertDuringRuntime(v8::internal::StoreBuffer*, unsigned char*)
+      1    0.4%    0.4%  v8::internal::Statement::IsJump() const
+      1    0.4%    0.4%  v8::internal::StackFrameIterator::Advance()
+      1    0.4%    0.4%  v8::internal::Script::FindSharedFunctionInfo(v8::internal::Isolate*, v8::internal::FunctionLiteral const*)
+      1    0.4%    0.4%  v8::internal::ScopeInfo::scope_type()
+      1    0.4%    0.4%  v8::internal::Scope::ResolveVariablesRecursively(v8::internal::ParseInfo*)
+      1    0.4%    0.4%  v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObject**, v8::internal::HeapObject*)
+      1    0.4%    0.4%  v8::internal::Scanner::Scanner(v8::internal::UnicodeCache*)
+      1    0.4%    0.4%  v8::internal::Scanner::ScanIdentifierOrKeyword()
+      1    0.4%    0.4%  v8::internal::SaveContext::SaveContext(v8::internal::Isolate*)
+      1    0.4%    0.4%  v8::internal::Runtime_StringSplit(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.4%    0.4%  v8::internal::RegExpBuilder::FlushText()
+      1    0.4%    0.4%  v8::internal::ParserBase<v8::internal::Parser>::ParseStatement(v8::internal::ZoneList<v8::internal::AstRawString const*>*, v8::internal::AllowLabelledFunctionStatement, bool*)
+      1    0.4%    0.4%  v8::internal::ParserBase<v8::internal::Parser>::ParseFormalParameter(v8::internal::ParserFormalParameters*, bool*)
+      1    0.4%    0.4%  v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpression(bool, bool*)
+      1    0.4%    0.4%  v8::internal::ParserBase<v8::internal::Parser>::FunctionState::FunctionState(v8::internal::ParserBase<v8::internal::Parser>::FunctionState**, v8::internal::Scope**, v8::internal::DeclarationScope*)
+      1    0.4%    0.4%  v8::internal::PageScavengingItem::Process(v8::internal::Scavenger*)
+      1    0.4%    0.4%  v8::internal::Map::RawCopy(v8::internal::Handle<v8::internal::Map>, int)
+      1    0.4%    0.4%  v8::internal::LoadGlobalIC::Load(v8::internal::Handle<v8::internal::Name>)
+      1    0.4%    0.4%  v8::internal::JsonParser<true>::ParseJsonObject()
+      1    0.4%    0.4%  v8::internal::JsonParser<true>::CommitStateToJsonObject(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, v8::internal::ZoneList<v8::internal::Handle<v8::internal::Object> >*)
+      1    0.4%    0.4%  v8::internal::JSObject::SetAccessor(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::AccessorInfo>)
+      1    0.4%    0.4%  v8::internal::JSObject::OptimizeAsPrototype(v8::internal::Handle<v8::internal::JSObject>)
+      1    0.4%    0.4%  v8::internal::JSObject::MigrateToMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, int)
+      1    0.4%    0.4%  v8::internal::JSObject::MakePrototypesFast(v8::internal::Handle<v8::internal::Object>, v8::internal::WhereToStart, v8::internal::Isolate*)
+      1    0.4%    0.4%  v8::internal::HeapObjectIterator::Next()
+      1    0.4%    0.4%  v8::internal::Heap::CreateFillerObjectAt(unsigned char*, int, v8::internal::ClearRecordedSlots)
+      1    0.4%    0.4%  v8::internal::Heap::Allocate(v8::internal::Map*, v8::internal::AllocationSpace, v8::internal::AllocationSite*)
+      1    0.4%    0.4%  v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::Rehash(v8::internal::StringTable*)
+      1    0.4%    0.4%  v8::internal::Handle<v8::internal::String> v8::internal::JsonParser<true>::ScanJsonString<true>()
+      1    0.4%    0.4%  v8::internal::Handle<v8::internal::String> v8::internal::JsonParser<true>::ScanJsonString<false>()
+      1    0.4%    0.4%  v8::internal::FunctionCallbackArguments::Call(void (*)(v8::FunctionCallbackInfo<v8::Value> const&))
+      1    0.4%    0.4%  v8::internal::FixedArray::set(int, v8::internal::Object*, v8::internal::WriteBarrierMode)
+      1    0.4%    0.4%  v8::internal::FixedArray::set(int, v8::internal::Object*)
+      1    0.4%    0.4%  v8::internal::ExpressionClassifier<v8::internal::ParserTypes<v8::internal::Parser> >::Accumulate(v8::internal::ExpressionClassifier<v8::internal::ParserTypes<v8::internal::Parser> >*, unsigned int, bool)
+      1    0.4%    0.4%  v8::internal::Deserializer::PostProcessNewObject(v8::internal::HeapObject*, int)
+      1    0.4%    0.4%  v8::internal::Deserializer::GetBackReferencedObject(int)
+      1    0.4%    0.4%  v8::internal::DescriptorArray::CopyUpToAddAttributes(v8::internal::Handle<v8::internal::DescriptorArray>, int, v8::internal::PropertyAttributes, int) [clone .constprop.664]
+      1    0.4%    0.4%  v8::internal::Context::global_object()
+      1    0.4%    0.4%  v8::internal::CompilationJob::RecordUnoptimizedCompilationStats() const
+      1    0.4%    0.4%  v8::internal::CompilationInfo::CompilationInfo(v8::internal::Zone*, v8::internal::Isolate*, v8::internal::ParseInfo*, v8::internal::FunctionLiteral*)
+      1    0.4%    0.4%  v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.4%    0.4%  v8::internal::Bitmap::Clear()
+      1    0.4%    0.4%  v8::internal::BaseNameDictionary<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::CopyEnumKeysTo(v8::internal::Handle<v8::internal::NameDictionary>, v8::internal::Handle<v8::internal::FixedArray>, v8::internal::KeyCollectionMode, v8::internal::KeyAccumulator*)
+      1    0.4%    0.4%  v8::internal::AstValueFactory::Internalize(v8::internal::Isolate*)
+      1    0.4%    0.4%  v8::internal::AstValue::IsPropertyName() const
+      1    0.4%    0.4%  v8::internal::AstNumberingVisitor::VisitStatements(v8::internal::ZoneList<v8::internal::Statement*>*)
+      1    0.4%    0.4%  v8::internal::AstNumberingVisitor::Visit(v8::internal::AstNode*)
+      1    0.4%    0.4%  v8::internal::AstNumberingVisitor::Renumber(v8::internal::FunctionLiteral*)
+      1    0.4%    0.4%  v8::internal::Assembler::pushq_imm32(int)
+      1    0.4%    0.4%  printf_positional
+      1    0.4%    0.4%  open_path
+      1    0.4%    0.4%  node::TTYWrap::GetWindowSize(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.4%    0.4%  node::TCPWrap::Connect(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.4%    0.4%  node::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.4%    0.4%  _nl_load_locale_from_archive
+      1    0.4%    0.4%  __pthread_mutex_timedlock
+      1    0.4%    0.4%  __localeconv
+      1    0.4%    0.4%  _IO_vfwprintf
+
+ [Summary]:
+   ticks  total  nonlib   name
+     24    8.7%    8.7%  JavaScript
+    229   82.7%   83.3%  C++
+      4    1.4%    1.5%  GC
+      2    0.7%          Shared libraries
+     22    7.9%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    102   50.7%   36.8%  v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     54   26.9%   19.5%  v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+     10    5.0%    3.6%  v8::internal::Builtin_JsonParse(int, v8::internal::Object**, v8::internal::Isolate*)
+      6    3.0%    2.2%  v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    2.5%    1.8%  v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    2.0%    1.4%  v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    1.5%    1.1%  v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.7%  v8::internal::Runtime_SetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.7%  v8::internal::Runtime_LoadGlobalIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.7%  v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.7%  v8::internal::Builtin_ErrorCaptureStackTrace(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.4%  v8::internal::Runtime_StringSplit(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.4%  v8::internal::Runtime_RegExpExec(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.4%  v8::internal::Runtime_ObjectKeys(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.4%  v8::internal::Runtime_MapGrow(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.4%  v8::internal::Runtime_KeyedStoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.4%  v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.4%  v8::internal::Runtime_KeyedGetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.4%  v8::internal::Runtime_InterpreterNewClosure(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.4%  v8::internal::Builtin_ObjectGetOwnPropertyDescriptor(int, v8::internal::Object**, v8::internal::Isolate*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     84   30.3%  node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     84  100.0%    v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     52   61.9%      LazyCompile: ~runInThisContext bootstrap_node.js:512:28
+     52  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:601:44
+     52  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:533:34
+     21   40.4%            LazyCompile: ~NativeModule.compile bootstrap_node.js:601:44
+      6   11.5%            LazyCompile: ~startup bootstrap_node.js:24:19
+      5    9.6%            Script: ~<anonymous> util.js:1:11
+      3    5.8%            Script: ~<anonymous> http.js:1:11
+      3    5.8%            LazyCompile: ~setupGlobalVariables bootstrap_node.js:268:32
+      2    3.8%            Script: ~<anonymous> tty.js:1:11
+      2    3.8%            Script: ~<anonymous> _http_client.js:1:11
+      2    3.8%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/etag/index.js:1:11
+      2    3.8%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/body-parser/lib/read.js:1:11
+      1    1.9%            Script: ~<anonymous> internal/encoding.js:1:11
+      1    1.9%            Script: ~<anonymous> internal/child_process.js:1:11
+      1    1.9%            Script: ~<anonymous> cluster.js:1:11
+      1    1.9%            Script: ~<anonymous> child_process.js:1:11
+      1    1.9%            Script: ~<anonymous> _http_common.js:1:11
+      1    1.9%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/methods/index.js:1:11
+      3    3.6%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg/lib/client.js:1:11
+      3  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg/lib/index.js:1:11
+      3  100.0%          LazyCompile: ~startup bootstrap_node.js:24:19
+      3  100.0%            Script: ~<anonymous> bootstrap_node.js:10:10
+      3    3.6%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      3  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+      3  100.0%          LazyCompile: ~startup bootstrap_node.js:24:19
+      3  100.0%            Script: ~<anonymous> bootstrap_node.js:10:10
+      2    2.4%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/send/index.js:1:11
+      2  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/utils.js:1:11
+      2  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      2  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      2    2.4%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/proxy-addr/index.js:1:11
+      2  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/utils.js:1:11
+      2  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      2  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      2    2.4%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg/lib/index.js:1:11
+      2  100.0%        LazyCompile: ~startup bootstrap_node.js:24:19
+      2  100.0%          Script: ~<anonymous> bootstrap_node.js:10:10
+      2    2.4%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg-types/lib/textParsers.js:1:11
+      2  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg-types/index.js:1:11
+      2  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg/lib/defaults.js:1:11
+      2  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg/lib/utils.js:1:11
+      2    2.4%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/utils.js:1:11
+      2  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      2  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      2  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+      2    2.4%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      2  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      2  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+      2  100.0%            LazyCompile: ~startup bootstrap_node.js:24:19
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/type-is/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/request.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/raw-body/node_modules/iconv-lite/lib/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/raw-body/index.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/body-parser/lib/read.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/body-parser/lib/types/json.js:1:11
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/qs/lib/stringify.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/qs/lib/index.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/middleware/query.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/qs/lib/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/middleware/query.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg-types/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg/lib/defaults.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg/lib/utils.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg/lib/client.js:1:11
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/finalhandler/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/router/route.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/router/index.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/router/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/request.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+      1  100.0%            LazyCompile: ~startup bootstrap_node.js:24:19
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+      1  100.0%        LazyCompile: ~startup bootstrap_node.js:24:19
+      1  100.0%          Script: ~<anonymous> bootstrap_node.js:10:10
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/debug/src/debug.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/debug/src/node.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/debug/src/index.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/finalhandler/index.js:1:11
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/body-parser/node_modules/iconv-lite/lib/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/body-parser/lib/read.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/body-parser/lib/types/json.js:1:11
+      1  100.0%            LazyCompile: ~loadParser /home/dsock/FEC/reviews/node_modules/body-parser/index.js:132:21
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/body-parser/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+      1  100.0%            LazyCompile: ~startup bootstrap_node.js:24:19
+      1    1.2%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/accepts/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/request.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/express.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/index.js:1:11
+
+     22    7.9%  UNKNOWN
+
+      8    2.9%  merge_state_array
+
+      7    2.5%  __memcpy_ssse3
+      4   57.1%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   50.0%      LazyCompile: ~NativeModule.compile bootstrap_node.js:601:44
+      2  100.0%        LazyCompile: ~NativeModule.require bootstrap_node.js:533:34
+      2  100.0%          LazyCompile: ~NativeModule.compile bootstrap_node.js:601:44
+      2  100.0%            LazyCompile: ~NativeModule.require bootstrap_node.js:533:34
+      1   25.0%      LazyCompile: ~addChunk _stream_readable.js:261:18
+      1  100.0%        LazyCompile: ~readableAddChunk _stream_readable.js:216:26
+      1  100.0%          LazyCompile: ~Readable.push _stream_readable.js:191:35
+      1  100.0%            LazyCompile: ~onread net.js:583:16
+      1   25.0%      LazyCompile: ~Readable.resume _stream_readable.js:802:37
+      1  100.0%        LazyCompile: ~connectionListenerInternal _http_server.js:316:36
+      1  100.0%          LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:273:36
+      1  100.0%            LazyCompile: ~connectionListener _http_server.js:310:28
+      1   14.3%    v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~createTimersList timers.js:196:26
+      1  100.0%        LazyCompile: ~insert timers.js:167:16
+      1  100.0%          LazyCompile: ~exports._unrefActive timers.js:157:32
+      1  100.0%            LazyCompile: ~Socket.setTimeout net.js:393:39
+      1   14.3%    v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~tryFile module.js:155:17
+      1  100.0%        LazyCompile: ~tryExtensions module.js:170:23
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/finalhandler/index.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+
+      5    1.8%  arena_get2.part.4
+
+      4    1.4%  v8::internal::Scanner::Scan()
+      3   75.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   33.3%      LazyCompile: ~trim_prefix /home/dsock/FEC/reviews/node_modules/express/lib/router/index.js:288:23
+      1  100.0%        LazyCompile: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/router/index.js:275:64
+      1  100.0%          LazyCompile: ~process_params /home/dsock/FEC/reviews/node_modules/express/lib/router/index.js:327:47
+      1  100.0%            LazyCompile: ~next /home/dsock/FEC/reviews/node_modules/express/lib/router/index.js:176:16
+      1   33.3%      LazyCompile: ~setupListenHandle net.js:1313:27
+      1  100.0%        LazyCompile: ~listenInCluster net.js:1391:25
+      1  100.0%          LazyCompile: ~Server.listen net.js:1433:35
+      1  100.0%            LazyCompile: ~listen /home/dsock/FEC/reviews/node_modules/express/lib/application.js:616:29
+      1   33.3%      LazyCompile: ~emitOne events.js:114:17
+      1  100.0%        LazyCompile: ~<anonymous> /home/dsock/FEC/reviews/node_modules/pg/lib/connection.js:115:30
+      1  100.0%          LazyCompile: ~emitOne events.js:114:17
+      1  100.0%            LazyCompile: ~addChunk _stream_readable.js:261:18
+
+      4    1.4%  v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::FindEntry(v8::internal::Isolate*, v8::internal::StringTableKey*)
+      3   75.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   66.7%      LazyCompile: ~startup bootstrap_node.js:24:19
+      2  100.0%        Script: ~<anonymous> bootstrap_node.js:10:10
+      1   33.3%      LazyCompile: ~alloc internal/freelist.js:11:8
+      1  100.0%        LazyCompile: ~connectionListenerInternal _http_server.js:316:36
+      1  100.0%          LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:273:36
+      1  100.0%            LazyCompile: ~connectionListener _http_server.js:310:28
+      1   25.0%    v8::internal::Runtime_KeyedGetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~tryFile module.js:155:17
+      1  100.0%        LazyCompile: ~tryExtensions module.js:170:23
+      1  100.0%          LazyCompile: ~loadParser /home/dsock/FEC/reviews/node_modules/body-parser/index.js:132:21
+      1  100.0%            LazyCompile: ~get /home/dsock/FEC/reviews/node_modules/body-parser/index.js:122:23
+
+      4    1.4%  node::Binding(v8::FunctionCallbackInfo<v8::Value> const&)
+      3   75.0%    v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   66.7%      Script: ~<anonymous> crypto.js:1:11
+      2  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:601:44
+      2  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:533:34
+      2  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/etag/index.js:1:11
+      1   33.3%      Script: ~<anonymous> internal/util.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:601:44
+      1  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:533:34
+      1  100.0%            Script: ~<anonymous> internal/encoding.js:1:11
+      1   25.0%    v8::internal::Runtime_MapGrow(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Script: ~<anonymous> internal/errors.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:601:44
+      1  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:533:34
+      1  100.0%            Script: ~<anonymous> util.js:1:11
+
+      3    1.1%  v8::internal::ParserBase<v8::internal::Parser>::ParseBinaryExpression(int, bool, bool*)
+      2   66.7%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      LazyCompile: ~startup bootstrap_node.js:24:19
+      1  100.0%        Script: ~<anonymous> bootstrap_node.js:10:10
+      1   50.0%      LazyCompile: ~onParserExecute _http_server.js:474:25
+      1   33.3%    v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~NativeModule.compile bootstrap_node.js:601:44
+      1  100.0%        LazyCompile: ~NativeModule.require bootstrap_node.js:533:34
+      1  100.0%          LazyCompile: ~startup bootstrap_node.js:24:19
+      1  100.0%            Script: ~<anonymous> bootstrap_node.js:10:10
+
+      3    1.1%  v8::internal::ParserBase<v8::internal::Parser>::BindingPatternUnexpectedToken()
+      2   66.7%    v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/mime/mime.js:1:11
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/send/index.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/utils.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      1   50.0%      LazyCompile: ~Client /home/dsock/FEC/reviews/node_modules/pg/lib/client.js:21:23
+      1  100.0%        LazyCompile: ~connect /home/dsock/FEC/reviews/node_modules/pg-pool/index.js:139:11
+      1  100.0%          LazyCompile: ~query /home/dsock/FEC/reviews/node_modules/pg-pool/index.js:234:9
+      1  100.0%            LazyCompile: ~app.get /home/dsock/FEC/reviews/server/app.js:31:32
+      1   33.3%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:273:36
+      1  100.0%        LazyCompile: ~connectionListener _http_server.js:310:28
+      1  100.0%          LazyCompile: ~emitOne events.js:114:17
+      1  100.0%            LazyCompile: ~onconnection net.js:1539:22
+
+      3    1.1%  v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      1   33.3%    v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~lookup dns.js:97:16
+      1  100.0%        LazyCompile: ~<anonymous> net.js:1090:61
+      1  100.0%          LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:273:36
+      1  100.0%            LazyCompile: ~lookupAndConnect net.js:1031:26
+      1   33.3%    v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~connectionListenerInternal _http_server.js:316:36
+      1  100.0%        LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:273:36
+      1  100.0%          LazyCompile: ~connectionListener _http_server.js:310:28
+      1  100.0%            LazyCompile: ~emitOne events.js:114:17
+      1   33.3%    v8::internal::Builtin_JsonParse(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~Module._extensions..json module.js:669:39
+      1  100.0%        Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/mime-db/index.js:1:11
+      1  100.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/mime-types/index.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/accepts/index.js:1:11
+
+      3    1.1%  node::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3  100.0%    v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      3  100.0%      LazyCompile: ~fs.stat fs.js:923:19
+      3  100.0%        LazyCompile: ~sendFile /home/dsock/FEC/reviews/node_modules/send/index.js:717:51
+      3  100.0%          LazyCompile: ~pipe /home/dsock/FEC/reviews/node_modules/send/index.js:510:43
+      3  100.0%            LazyCompile: ~serveStatic /home/dsock/FEC/reviews/node_modules/serve-static/index.js:72:31
+
+      3    1.1%  node::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3  100.0%    v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   66.7%      LazyCompile: ~tryFile module.js:155:17
+      2  100.0%        LazyCompile: ~tryExtensions module.js:170:23
+      1   50.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/raw-body/node_modules/iconv-lite/lib/index.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/raw-body/index.js:1:11
+      1   50.0%          Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/utils.js:1:11
+      1  100.0%            Script: ~<anonymous> /home/dsock/FEC/reviews/node_modules/express/lib/application.js:1:11
+      1   33.3%      LazyCompile: ~startup bootstrap_node.js:24:19
+      1  100.0%        Script: ~<anonymous> bootstrap_node.js:10:10
+
